@@ -1,2 +1,1 @@
-# dotfiles
-## My dotfiles on my linux systems
+# dotfiles-laptop
