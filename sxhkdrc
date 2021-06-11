@@ -1,22 +1,6 @@
-#Raise Volume by 10
-XF86AudioRaiseVolume
-	pulseaudio-ctl up 10
-#Lower Volume by 10
-XF86AudioLowerVolume
-	pulseaudio-ctl down 10
-#Mute Audio Out Toggle
-XF86AudioMute
-	pulseaudio-ctl mute
-#Mute Microphone Toggle
-XF86AudioMicMute
-	pulseaudio-ctl mute-input
-
 #Reload SXHKD conf
 super + Escape
 	pkill -USR1 -x sxhkd
 #Shutdown Computer
 super + s
-	shutdown -f now
-#Reboot Computer
-super + r
-	reboot
+	openrc-shutdown
