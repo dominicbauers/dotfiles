@@ -48,11 +48,16 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-nitrogen --restore &
+# xrandr --output LVDS1 --mode 1366x768 --output DP1 --mode 2560x1440 --above LVDS1
+feh --bg-scale /home/dbauers/wallpapers/mountFuji02.jpg &
 picom --experimental-backends &
 sxhkd &
-pulseaudio --start &
 nm-applet &
-pasystray &
 slstatus &
-exec dwm
+pasystray &
+/usr/bin/pipewire &
+/usr/bin/pipewire-pulse &
+/usr/bin/pipewire-media-session &
+pa-applet &
+
+exec dbus-launch --exit-with-session dwm
