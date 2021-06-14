@@ -3,4 +3,7 @@ super + Escape
 	pkill -USR1 -x sxhkd
 #Shutdown Computer
 super + s
-	openrc-shutdown
+	sudo poweroff
+#Reboot Computer
+super + r
+	sudo reboot
